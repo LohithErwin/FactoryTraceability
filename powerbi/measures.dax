@@ -1,0 +1,11 @@
+// Historical report: Power BI Desktop > Get data > PostgreSQL > pick views v_* (Import or DirectQuery)
+Total Events        = SUM ( v_throughput_minute[events] )
+QC Fails            = SUM ( v_throughput_minute[fails] )
+Total Violations    = SUM ( v_violations_trend[violations] )
+Violations per 1k   = DIVIDE ( [Total Violations], [Total Events] ) * 1000
+Open SLA Breaches   = CALCULATE ( COUNTROWS ( v_sla_breaches ), v_sla_breaches[status] = "OPEN" )
+Avg SLA Delay (min) = AVERAGE ( v_sla_breaches[delay_minutes] )
+Worst Team Health   = MAX ( v_team_health_trend[health_score] )   // 0 green, 1 amber, 2 red
+Avg ETA Slip (min)  = AVERAGE ( v_team_health_trend[avg_eta_slippage_min] )
+// Suggested visuals: line (minute x events by station), stacked column (minute x violations by type),
+// table/bar (sla breaches by type & status), line (minute x avg ETA slip by team), heat matrix (team x minute x health_score)

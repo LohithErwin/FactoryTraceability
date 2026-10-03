@@ -1,0 +1,113 @@
+# =========================
+# Python
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# =========================
+# Environment / Secrets
+# =========================
+
+.env
+.env.*
+.env.example
+
+# =========================
+# IDE / Editor
+# =========================
+
+.vscode/
+.idea/
+*.code-workspace
+
+# =========================
+# OS Files
+# =========================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Python Tools
+# =========================
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# =========================
+# Jupyter
+# =========================
+
+.ipynb_checkpoints/
+
+# =========================
+# Logs
+# =========================
+
+*.log
+logs/
+
+# =========================
+# Temporary Files
+# =========================
+
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# =========================
+# Database / Local Data
+# =========================
+
+*.db
+*.sqlite
+*.sqlite3
+
+# PostgreSQL local dumps
+*.sql.gz
+*.dump
+
+# =========================
+# Kafka / Local Runtime
+# =========================
+
+kafka-logs/
+data/
+tmp/
+
+# =========================
+# Power BI
+# =========================
+
+*.pbix
+*.pbit
+
+# =========================
+# Generated / Build Files
+# =========================
+
+build/
+dist/
+*.egg-info/
+
+# =========================
+# Coverage
+# =========================
+
+.coverage.*
+coverage.xml
